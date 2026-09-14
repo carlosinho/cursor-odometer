@@ -1,8 +1,21 @@
-# Cursor Odometer
+<h1 align="center">Cursor Odometer</h1>
 
-A macOS menu bar app that measures how far your mouse cursor has physically traveled across the glass of your displays. It shows the total in miles or kilometers, in silly units like blue whales and Titanics, and issues certificates when the total passes real-world distances: your first marathon, the height of Everest, the edge of space, the width of Delaware or Germany, and eventually the Moon.
+<table>
+  <tr>
+    <td width="230" align="center" valign="top">
+      <img src="docs/cursor-odometer-2.png" alt="Cursor Odometer in action" width="300" />
+    </td>
+    <td valign="middle">
+        A macOS menu bar app that measures how far your mouse cursor has physically traveled across the glass of your displays. 
+        <br /><br />
+        It shows the total in miles or kilometers, in silly units like blue whales and Titanics, and issues certificates when the total passes real-world distances: your first marathon, the height of Everest, the edge of space, the width of Delaware or Germany, and eventually the Moon. 
+        <br /><br />
+        MIT licensed.
+    </td>
+  </tr>
+</table>
 
-MIT licensed.
+<br clear="right" />
 
 ## Why
 
