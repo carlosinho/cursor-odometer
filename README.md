@@ -2,7 +2,7 @@
 
 <table>
   <tr>
-    <td width="330" align="center" valign="top">
+    <td width="350" align="center" valign="top">
       <img src="docs/cursor-odometer-2.png" alt="Cursor Odometer in action" width="300" />
     </td>
     <td valign="middle">
