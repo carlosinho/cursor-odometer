@@ -11,15 +11,13 @@
         It shows the total in miles or kilometers, in silly units like blue whales and Titanics, and issues certificates when the total passes real-world distances: your first marathon, the height of Everest, the edge of space, the width of Delaware or Germany, and eventually the Moon. 
         <br /><br />
         MIT licensed.
+        <h2>Why</h2>
+        Nobody knows how far their cursor goes in a year. And I am sure everybody wants to know it badly. So, now you can.
     </td>
   </tr>
 </table>
 
 <br clear="right" />
-
-## Why
-
-Nobody knows how far their cursor goes in a year. And I am sure everybody wants to know it badly. So, now you can.
 
 ## What it does
 
