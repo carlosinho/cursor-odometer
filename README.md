@@ -8,6 +8,8 @@ It shows the total in miles or kilometers, in silly units like blue whales and T
 
 MIT licensed.
 
+<br clear="right" />
+
 ## Why
 
 Nobody knows how far their cursor goes in a year. And I am sure everybody wants to know it badly. So, now you can.
@@ -20,8 +22,6 @@ Nobody knows how far their cursor goes in a year. And I am sure everybody wants 
 - Persists everything between launches in a single JSON file.
 
 The menu bar item itself shows the cursor icon. Everything else lives in the popover.
-
-<br clear="right" />
 
 ## User flows
 
