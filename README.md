@@ -13,20 +13,18 @@
         MIT licensed.
         <h2>Why</h2>
         Nobody knows how far their cursor goes in a year. And I am sure everybody wants to know it badly. So, now you can.
+        <h2>What it does</h2>
+        <ul>
+            <li>Counts cursor movement in physical units by converting screen points to millimeters using each display's reported physical size.</li>
+            <li>Shows the running total in the menu bar popover, in standard units and in a user-chosen set of custom units.</li>
+            <li>Issues a certificate every time the total crosses a milestone, in four categories: Sport, Landmarks, Space, and Region.</li>
+            <li>Persists everything between launches in a single JSON file.</li>
+        </ul>
     </td>
   </tr>
 </table>
 
 <br clear="right" />
-
-## What it does
-
-- Counts cursor movement in physical units by converting screen points to millimeters using each display's reported physical size.
-- Shows the running total in the menu bar popover, in standard units and in a user-chosen set of custom units.
-- Issues a certificate every time the total crosses a milestone, in four categories: Sport, Landmarks, Space, and Region.
-- Persists everything between launches in a single JSON file.
-
-The menu bar item itself shows the cursor icon. Everything else lives in the popover.
 
 ## User flows
 
