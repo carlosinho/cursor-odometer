@@ -8,7 +8,7 @@ It shows the total in miles or kilometers, in silly units like blue whales and T
 
 MIT licensed.
 
-<br clear="right" />
+<br clear="left" />
 
 ## Why
 
