@@ -146,7 +146,6 @@ struct OdometerView: View {
         VStack(alignment: .leading, spacing: 6) {
             HStack {
                 Button { page = .settings } label: { Label("Settings", systemImage: "gearshape") }
-                Button("Reset…") { confirmReset() }
                 Spacer()
                 Button("Quit") { NSApp.terminate(nil) }
             }
@@ -162,15 +161,5 @@ struct OdometerView: View {
                 .controlSize(.small)
             }
         }
-    }
-
-    private func confirmReset() {
-        let alert = NSAlert()
-        alert.messageText = "Reset the odometer?"
-        alert.informativeText = "Total distance and all certificates will be erased."
-        alert.addButton(withTitle: "Reset")
-        alert.addButton(withTitle: "Cancel")
-        alert.alertStyle = .warning
-        if alert.runModal() == .alertFirstButtonReturn { tracker.reset() }
     }
 }

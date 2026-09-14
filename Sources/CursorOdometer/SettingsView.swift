@@ -36,10 +36,26 @@ struct SettingsView: View {
             Toggle("Show debug controls", isOn: $showDebug)
             Text("Adds buttons to the main page that simulate distance, so certificates can be tested without weeks of mousing.")
                 .font(.caption).foregroundStyle(.secondary)
+            Divider()
+            HStack {
+                Button("Reset odometer…") { confirmReset() }.controlSize(.small)
+                Text("Erases the total and all certificates. Keeps these settings.")
+                    .font(.caption).foregroundStyle(.secondary)
+            }
         }
         .padding(.horizontal, 14)
         .padding(.bottom, 14)
         .frame(width: 300, alignment: .leading)
+    }
+
+    private func confirmReset() {
+        let alert = NSAlert()
+        alert.messageText = "Reset the odometer?"
+        alert.informativeText = "Total distance and all certificates will be erased."
+        alert.addButton(withTitle: "Reset")
+        alert.addButton(withTitle: "Cancel")
+        alert.alertStyle = .warning
+        if alert.runModal() == .alertFirstButtonReturn { tracker.reset() }
     }
 
     private var description: String {
