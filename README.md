@@ -1,28 +1,25 @@
 <h1 align="center">Cursor Odometer</h1>
 
-<table>
-  <tr>
-    <td width="350" align="center" valign="top">
-      <img src="docs/cursor-odometer-2.png" alt="Cursor Odometer in action" width="330" />
-    </td>
-    <td valign="middle">
-        A macOS menu bar app that measures how far your mouse cursor has physically traveled across the glass of your displays. 
-        <br /><br />
-        It shows the total in miles or kilometers, in silly units like blue whales and Titanics, and issues certificates when the total passes real-world distances: your first marathon, the height of Everest, the edge of space, the width of Delaware or Germany, and eventually the Moon. 
-        <br /><br />
-        MIT licensed.
-        <h2>Why</h2>
-        Nobody knows how far their cursor goes in a year. And I am sure everybody wants to know it badly. So, now you can.
-        <h2>What it does</h2>
-        <ul>
-            <li>Counts cursor movement in physical units by converting screen points to millimeters using each display's reported physical size.</li>
-            <li>Shows the running total in the menu bar popover, in standard units and in a user-chosen set of custom units.</li>
-            <li>Issues a certificate every time the total crosses a milestone, in four categories: Sport, Landmarks, Space, and Region.</li>
-            <li>Persists everything between launches in a single JSON file.</li>
-        </ul>
-    </td>
-  </tr>
-</table>
+<img src="docs/cursor-odometer-2.png" alt="Cursor Odometer in action" width="330" align="left" />
+
+A macOS menu bar app that measures how far your mouse cursor has physically traveled across the glass of your displays. 
+
+It shows the total in miles or kilometers, in silly units like blue whales and Titanics, and issues certificates when the total passes real-world distances: your first marathon, the height of Everest, the edge of space, the width of Delaware or Germany, and eventually the Moon. 
+
+MIT licensed.
+
+## Why
+
+Nobody knows how far their cursor goes in a year. And I am sure everybody wants to know it badly. So, now you can.
+
+## What it does
+
+- Counts cursor movement in physical units by converting screen points to millimeters using each display's reported physical size.
+- Shows the running total in the menu bar popover, in standard units and in a user-chosen set of custom units.
+- Issues a certificate every time the total crosses a milestone, in four categories: Sport, Landmarks, Space, and Region.
+- Persists everything between launches in a single JSON file.
+
+The menu bar item itself shows the cursor icon. Everything else lives in the popover.
 
 <br clear="right" />
 
