@@ -3,6 +3,8 @@ import OdometerCore
 
 struct CertificateView: View {
     let certificate: Certificate
+    let system: MeasurementSystem
+    private var unit: DistanceUnit { certificate.milestone?.unit ?? system.primaryUnit }
 
     var body: some View {
         VStack(spacing: 10) {
@@ -12,15 +14,16 @@ struct CertificateView: View {
             Text(NSFullUserName()).font(.title2.bold())
             Text("has traveled a distance equivalent to").font(.callout).foregroundStyle(.secondary)
             Text(certificate.milestone?.detail ?? certificate.milestoneID).font(.title3.bold()).multilineTextAlignment(.center)
-            Text("\(DistanceUnit.miles.format(meters: certificate.milestone?.meters ?? 0)) of on-screen cursor movement")
+            Text("\(unit.format(meters: certificate.milestone?.meters ?? 0)) of on-screen cursor movement")
                 .font(.callout)
             Divider()
-            Text("Total at crossing: \(DistanceUnit.miles.format(meters: certificate.totalMetersAtCrossing))")
+            Text("Total at crossing: \(unit.format(meters: certificate.totalMetersAtCrossing))")
                 .font(.caption).foregroundStyle(.secondary)
             Text("Issued \(certificate.earnedAt.formatted(date: .long, time: .shortened))")
                 .font(.caption).foregroundStyle(.secondary)
         }
-        .padding(20)
+        .padding(.horizontal, 20)
+        .padding(.bottom, 20)
         .frame(width: 300)
         .background(RoundedRectangle(cornerRadius: 12).strokeBorder(.yellow, lineWidth: 3).padding(6))
     }

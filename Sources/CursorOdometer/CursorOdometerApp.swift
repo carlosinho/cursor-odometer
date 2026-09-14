@@ -19,7 +19,7 @@ struct CursorOdometerApp: App {
 private struct MenuBarLabel: View {
     @ObservedObject var tracker: Tracker
     var body: some View {
-        Label(DistanceUnit.miles.format(meters: tracker.state.totalMeters), systemImage: "cursorarrow.motionlines")
+        Label(tracker.state.system.primaryUnit.format(meters: tracker.state.totalMeters), systemImage: "cursorarrow.motionlines")
     }
 }
 

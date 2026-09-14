@@ -55,13 +55,24 @@ final class Tracker: ObservableObject {
 
     func reset() {
         accumulator.reset()
-        state = OdometerState()
+        state = OdometerState(system: state.system, customUnitIDs: state.customUnitIDs)
         newCertificate = nil
         store.save(state)
         lastSavedMeters = 0
     }
 
     func dismissNewCertificate() { newCertificate = nil }
+
+    func setCustomUnit(_ id: String, enabled: Bool) {
+        state.setCustomUnit(id, enabled: enabled)
+        store.save(state)
+    }
+
+    func setSystem(_ system: MeasurementSystem) {
+        guard system != state.system else { return }
+        state.setSystem(system)
+        store.save(state)
+    }
 
     // MARK: - Private
 

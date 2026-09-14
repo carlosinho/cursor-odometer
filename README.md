@@ -1,8 +1,40 @@
 # Cursor Odometer
 
 A macOS menu bar app that tracks how far your mouse cursor has traveled across the glass of your
-displays, in miles, kilometers, meters, feet, and less serious units like football fields.
-When your cursor has covered a distance equal to crossing a US state, it issues a certificate.
+displays, in standard units and less serious ones like football fields, blue whales, and Titanics.
+As the total passes real-world distances it issues certificates: your first marathon, the height
+of Everest, the edge of space, crossing Delaware or Germany, and eventually the Moon.
+
+## Certificates
+
+Milestones come in four categories. The popover always shows the next one in each, with a
+progress bar, so there is something close from the first hour on.
+
+| Category | Examples |
+|---|---|
+| Sport | football field, first mile or kilometer, half marathon, marathon, English Channel, Ironman, Tour de France |
+| Landmarks | Eiffel Tower, Burj Khalifa, Golden Gate Bridge, Everest, Manhattan, Lake Geneva, Panama Canal, Great Wall, the Equator |
+| Space | Kármán line, ISS altitude, the Moon |
+| Region | US state crossings (US units) or European country crossings (metric) |
+
+All distances are approximate and live in one table in `Sources/OdometerCore/Milestones.swift`.
+
+## Units
+
+Settings (in the popover) offers two measurement systems:
+
+| | US | Metric |
+|---|---|---|
+| Standard units | miles, feet | kilometers, meters |
+| Football field | 100 yards (91.44 m) | 105 m pitch |
+| Region certificates | crossing US states, Delaware to Texas | crossing European countries, Liechtenstein to Spain |
+
+Settings also has a checklist of custom units, from bananas to light-seconds. The defaults are
+football fields, blue whales, Boeing 747s, Titanics, Eiffel Towers, Golden Gate Bridges, and
+marathons.
+
+Switching systems keeps the total and backfills certificates for milestones already passed in the
+new system. Certificates earned in the other system are kept but hidden until you switch back.
 
 This is a proof of concept meant to be built and run locally. It is not signed, notarized, or
 distributed through the App Store.
