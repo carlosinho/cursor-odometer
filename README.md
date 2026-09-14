@@ -65,7 +65,7 @@ No Accessibility or Input Monitoring permission is needed. Mouse events, unlike 
 scripts/bundle.sh --open
 ```
 
-This builds a release binary with SwiftPM, wraps it in `build/CursorOdometer.app` with a generated Info.plist, signs it ad hoc, and launches it. Omit `--open` to only build. The app has no Dock icon and no windows other than the popover; quit it from the popover footer.
+This builds a release binary with SwiftPM, wraps it in `build/CursorOdometer.app` with a generated Info.plist and icon, signs it ad hoc, and launches it. Omit `--open` to only build. The app has no Dock icon and no windows other than the popover; quit it from the popover footer.
 
 For a quick development run without a bundle:
 
@@ -92,6 +92,8 @@ There are no environment variables and no config files.
 | All tracked state and preferences | `~/Library/Application Support/CursorOdometer/state.json` |
 | Debug controls toggle | UserDefaults key `showDebugControls` in domain `com.local.cursor-odometer` |
 | Bundle identifier | `com.local.cursor-odometer`, set in `scripts/bundle.sh` |
+| App version | `Sources/CursorOdometer/AppVersion.swift`; shown in Settings and copied into Info.plist by `scripts/bundle.sh` |
+| App icon | `Resources/app-icon.png`, converted to `.icns` by `scripts/bundle.sh` |
 
 Delete the JSON file to start over completely, including preferences. Reset inside the app keeps preferences.
 
@@ -108,12 +110,14 @@ Sources/OdometerCore/                  pure logic, no AppKit or SwiftUI
   OdometerState.swift                  persisted state, certificate issuing, system switching
 Sources/CursorOdometer/                the app
   CursorOdometerApp.swift              MenuBarExtra scene and AppDelegate
+  AppVersion.swift                     the version string, single source of truth
   Tracker.swift                        global mouse monitor, calibration cache, publish and save
   StateStore.swift                     JSON load and atomic save
   OdometerView.swift                   popover: main page and page switching
   SettingsView.swift                   units, custom unit checklist, debug toggle
   CertificateView.swift                certificate page
 Tests/OdometerCoreTests/               Swift Testing suites for OdometerCore
+Resources/app-icon.png                 source image for the app icon
 scripts/bundle.sh                      release build, .app assembly, ad-hoc signing
 scripts/test.sh                        swift test with Command Line Tools search paths
 ```

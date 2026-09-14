@@ -42,6 +42,8 @@ struct SettingsView: View {
                 Text("Erases the total and all certificates. Keeps these settings.")
                     .font(.caption).foregroundStyle(.secondary)
             }
+            Divider()
+            Text("Cursor Odometer \(AppVersion.short)").font(.caption).foregroundStyle(.secondary)
         }
         .padding(.horizontal, 14)
         .padding(.bottom, 14)
