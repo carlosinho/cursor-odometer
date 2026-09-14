@@ -3,7 +3,7 @@
 <table>
   <tr>
     <td width="350" align="center" valign="top">
-      <img src="docs/cursor-odometer-2.png" alt="Cursor Odometer in action" width="300" />
+      <img src="docs/cursor-odometer-2.png" alt="Cursor Odometer in action" width="330" />
     </td>
     <td valign="middle">
         A macOS menu bar app that measures how far your mouse cursor has physically traveled across the glass of your displays. 
